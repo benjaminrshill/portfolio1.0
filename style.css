@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital@0;1&family=Raleway:wght@200;400;700&display=swap');
+
+:root {
+	--main-background-color: #111;
+	--main-text-color: #111;
+	--main-style-color: #ff3541;
+	--alt-style-color: #ffc759;
+	box-sizing: border-box;	
+}
+
+body {
+	margin: auto;
+	font-family: 'Lora', serif;
+	font-size: 15px;
+	color: var(--main-text-color);
+	font-weight: 400;
+	background-color: var(--main-background-color);
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: 'Raleway', sans-serif;
+	text-transform: uppercase;
+	text-shadow: 0 1px 1px rgba(0,0,0,0.4),
+	             0 2px 1px rgba(0,0,0,0.35),
+	             0 3px 1px rgba(0,0,0,0.3),
+	             0 5px 1px rgba(0,0,0,0.25),
+	             0 7px 1px rgba(0,0,0,0.2),
+	             0 9px 1px rgba(0,0,0,0.1);
+}
+
+h1, h2 {
+	color: var(--main-style-color);	
+}
+
+h3, h4, h5 {
+	color: var(--main-text-color);
+}
+
+h1, h4 {
+	font-weight: 700;
+}
+
+h2, h5 {
+	font-weight: 200;
+}
+
+a {
+	color: var(--main-text-color);
+	text-decoration: none;
+}
+
+header {
+	position: fixed;
+	top: 0;
+	width: 100%;
+	height: 50px;
+	font-family: 'Raleway', sans-serif;
+	background-color: #000;
+	box-shadow: 0 2px 20px #000;
+}
+
+header div {
+	float: left;
+	padding: 5px 10px;
+	line-height: 30px;
+	transition: all 0.5s;
+}
+
+footer {
+	margin: 70px auto auto auto;
+}
+
+main {
+	margin: 40px 0;
+	padding-bottom: 50px;
+	background-color: #444;
+	box-shadow: 0 1px 10px #111;
+}
+
+main > div {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	margin: auto;
+}
+
+main p {
+	padding-right: 10%;
+}
+
+
+@media screen and (max-width: 1400px) {
+
+	.mainWidth {
+		width: 75%;
+	}
+
+	main > div {
+		grid-template-columns: 1fr 1fr;
+	}
+
+}
+
+
+@media screen and (max-width: 1000px) {
+
+	.mainWidth {
+		width: 70%;
+	}
+
+	main > div {
+		grid-template-columns: auto;
+	}
+
+	main p {
+		padding-right: 0;
+	}
+
+}
+
+
+@media screen and (max-width: 800px) {
+
+	.burger {
+		display: flex;
+	}
+	
+	.burger img {
+	    height: 40px;
+	}
+
+	.menu {
+		display: none;
+	}
+
+	.mainWidth {
+		width: 85%;
+	}
+
+}
