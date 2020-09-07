@@ -1,39 +1,56 @@
-@import url('https://fonts.googleapis.com/css2?family=Lora:ital@0;1&family=Raleway:wght@200;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Slab&family=Raleway:wght@200;400;700&display=swap');
 
 :root {
 	--main-background-color: #111;
 	--main-text-color: #111;
+	--alt-text-color: #eee;
 	--main-style-color: #ff3541;
 	--alt-style-color: #ffc759;
+	--main-typeface: 'Raleway', sans-serif;
+	--alt-typeface: 'Lora', serif;
 	box-sizing: border-box;	
 }
 
 body {
 	margin: auto;
-	font-family: 'Lora', serif;
+	font-family: var(--main-typeface);
 	font-size: 15px;
 	color: var(--main-text-color);
-	font-weight: 400;
 	background-color: var(--main-background-color);
 }
 
+/*div, input, label, h4, h5 {
+	outline: 1px solid white;
+}*/
+
 h1, h2, h3, h4, h5, h6 {
-	font-family: 'Raleway', sans-serif;
+	margin: 0;
 	text-transform: uppercase;
-	text-shadow: 0 1px 1px rgba(0,0,0,0.4),
-	             0 2px 1px rgba(0,0,0,0.35),
-	             0 3px 1px rgba(0,0,0,0.3),
-	             0 5px 1px rgba(0,0,0,0.25),
-	             0 7px 1px rgba(0,0,0,0.2),
-	             0 9px 1px rgba(0,0,0,0.1);
 }
 
 h1, h2 {
-	color: var(--main-style-color);	
+	font-size: 1rem;
+	line-height: 1.5rem;
+	color: var(--main-style-color);
+	
 }
 
-h3, h4, h5 {
+h3 {
+	margin: 20px auto;
+	font-size: 1.5rem;
+	text-align: center;
+	color: var(--main-style-color);
+	text-shadow:
+	      0 2px 1px rgba(0, 0, 0, 0.3),
+          0 4px 2px rgba(0, 0, 0, 0.2),
+          0 8px 3px rgba(0, 0, 0, 0.1),
+          0 16px 4px rgba(0, 0, 0, 0.1);
+}
+
+h4, h5 {
+	margin: 5px 0 5px 50px;
 	color: var(--main-text-color);
+
 }
 
 h1, h4 {
@@ -41,7 +58,7 @@ h1, h4 {
 }
 
 h2, h5 {
-	font-weight: 200;
+	font-weight: 400;
 }
 
 a {
@@ -50,90 +67,146 @@ a {
 }
 
 header {
-	position: fixed;
-	top: 0;
-	width: 100%;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	margin: auto;
+	padding: 5px;
+	width: 95vw;
 	height: 50px;
-	font-family: 'Raleway', sans-serif;
-	background-color: #000;
-	box-shadow: 0 2px 20px #000;
+	text-align: right;
 }
 
-header div {
-	float: left;
-	padding: 5px 10px;
-	line-height: 30px;
-	transition: all 0.5s;
-}
-
-footer {
-	margin: 70px auto auto auto;
+.logo img {
+	width: 50px;
 }
 
 main {
 	margin: 40px 0;
-	padding-bottom: 50px;
-	background-color: #444;
-	box-shadow: 0 1px 10px #111;
 }
 
-main > div {
-	display: grid;
-	grid-template-columns: 1fr 1fr 1fr;
+section {
 	margin: auto;
 }
 
-main p {
-	padding-right: 10%;
+section > div {
+	margin: 15px auto;
+	padding: 10px;
+	background-color: var(--main-style-color);
+	transition: all 1s;
+}
+
+input[type=checkbox] {
+	display: none;
+}
+
+label input ~ div {
+	display: none;
+}
+
+label input:checked ~ div {
+	display: block;
+}
+
+label .itemArrow {
+	float: left;
+	margin: 12px 0 0 10px;
+	width: 20px;
+}
+
+label input:checked ~ .itemArrow {
+	transform: rotate(90deg);
+}
+
+.paragraph {
+	font-family: var(--alt-typeface);
+}
+.contentImg {
+	display: none;
+}
+
+footer {
+	margin: 70px auto auto auto;
+	background-color: var(--main-style-color);
 }
 
 
-@media screen and (max-width: 1400px) {
+@media screen and (min-width: 800px) {
 
-	.mainWidth {
-		width: 75%;
+	h3 {
+		margin: 50px auto 0 auto;
+		padding: 20px 0;
+		color: var(--main-text-color);
+		background-color: var(--main-style-color);
 	}
 
-	main > div {
-		grid-template-columns: 1fr 1fr;
+	h4, h5 {
+		margin: 5px 0 5px 0;
+		text-align: center;
+		color: var(--alt-text-color);
 	}
 
-}
-
-
-@media screen and (max-width: 1000px) {
-
-	.mainWidth {
-		width: 70%;
+	a {
+		color: var(--alt-text-color);
+		text-decoration: none;
 	}
 
-	main > div {
-		grid-template-columns: auto;
+	header {
+		width: 300px;
 	}
 
-	main p {
-		padding-right: 0;
+	section > div {
+		margin: 0;
+		color: var(--alt-text-color);
+		background-color: transparent;
 	}
 
-}
-
-
-@media screen and (max-width: 800px) {
-
-	.burger {
+	.portfolio {
 		display: flex;
+		flex-direction: row;
+		justify-content: space-evenly;
+	}
+
+	.portfolio:nth-child(even) {
+		background-color: #392e2e;
+	}
+
+	.portfolio div {
+		width: 40vw;
 	}
 	
-	.burger img {
-	    height: 40px;
+	.portfolio h4, .portfolio h5 {
+		text-align: left;
 	}
 
-	.menu {
+	.content {
+		width: 100%;
+	}
+
+	.contentImg {
+		display: block;
+		width: 100%;
+		height: 300px;
+		object-fit: cover;
+	}
+
+	label input ~ div {
+		display: block;
+	}
+
+	label .itemArrow {
 		display: none;
 	}
 
-	.mainWidth {
-		width: 85%;
+	.aboutText {
+		text-align: center;
 	}
+
+}
+
+
+@media screen and (min-width: 1200px) {
+
+	
 
 }
