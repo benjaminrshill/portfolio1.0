@@ -142,26 +142,26 @@ input[type=checkbox] {
 	display: none;
 }
 
-label input ~ div {
+input ~ div {
 	height: 0;
 	transform: rotateX(90deg);
 	transform-origin: top;
 	transition: all 1s;
 }
 
-label input:checked ~ div {
+input:checked ~ div {
 	padding: 10px 0;
 	height: auto;
 	transform: rotateX(0);
 }
 
-label input ~ div p {
+input ~ div p {
 	display: none;
 	margin: 0;
 	padding: 0;
 }
 
-label input:checked ~ div p {
+input:checked ~ div p {
 	display: block;
 	padding: 10px 20px;
 }
@@ -173,7 +173,7 @@ label .itemArrow {
 	transition: all 0.5s;
 }
 
-label input:checked ~ .itemArrow {
+input:checked ~ label .itemArrow {
 	transform: rotate(45deg);
 }
 
@@ -211,7 +211,7 @@ label input:checked ~ .itemArrow {
 		background-color: transparent;
 	}
 
-	.portfolio:nth-child(even) {
+	.portfolio:nth-child(odd) {
 		background-color: #392e2e;
 	}
 
@@ -265,16 +265,16 @@ label input:checked ~ .itemArrow {
 
 	/* BEGIN REMOVING CHECKBOX STYLING FOR DESKTOP */
 
-	label input ~ div {
+	input ~ div {
 		height: auto;
 		transform: rotateX(0);
 	}
 
-	label input:checked ~ div {
+	input:checked ~ div {
 		padding: 0;
 	}
 
-	label input ~ div p, label input:checked ~ div p  {
+	input ~ div p, input:checked ~ div p  {
 		display: block;
 		margin: 10px 0;
 		padding: 0;
