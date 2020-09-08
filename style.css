@@ -8,10 +8,10 @@
 	--alt-style-color: #ffc759;
 	--main-typeface: 'Raleway', sans-serif;
 	--alt-typeface: 'Josefin Slab', serif;
-	box-sizing: border-box;	
 }
 
 body {
+	box-sizing: border-box;
 	margin: auto;
 	font-family: var(--main-typeface);
 	font-size: 17px;
