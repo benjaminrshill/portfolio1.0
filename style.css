@@ -27,6 +27,25 @@ h1, h2, h3, h4, h5, h6 {
 	text-transform: uppercase;
 }
 
+/* SPANS TO REPLACE H4 AND H5 BECAUSE OF LABEL, UN-REPLACE AT A LATER DATE */
+span {
+	display: block;
+	margin: 0;
+	text-transform: uppercase;
+	margin: 5px 0 5px 50px;
+	line-height: 1rem;
+	color: #111;
+}
+
+.itemTitle {
+	padding-top: 15px;
+	font-weight: 700;
+}
+
+.itemDesc {
+	padding-bottom: 15px;
+}
+
 /* === BEGIN MOBILE STYLING === */
 
 h1, h2 {
@@ -138,6 +157,10 @@ section {
 	   object-fit: cover;
 }
 
+.about {
+	margin: 30px 0 0 0;
+}
+
 .contact {
 	display: -webkit-box;
 	display: -ms-flexbox;
@@ -219,7 +242,7 @@ input:checked ~ label .itemArrow {
 	}
 
 	main h4, h5 {
-		margin: 5px 0 5px 0;
+		margin: 5px 0;
 		color: #eee;
 	}
 
