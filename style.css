@@ -20,6 +20,10 @@ body {
 	background-color: var(--main-background-color);
 }
 
+p {
+	font-family: var(--alt-typeface);
+}
+
 h1, h2, h3, h4, h5, h6 {
 	margin: 0;
 	text-transform: uppercase;
@@ -95,7 +99,7 @@ header {
 }
 
 main {
-	margin: 40px 0;
+	margin: 40px 0 0 0;
 }
 
 section {
@@ -114,10 +118,6 @@ section {
 	background-color: var(--alt-style-color);
 }
 
-p {
-	font-family: var(--alt-typeface);
-}
-
 .contentImg {
 	display: block;
 	width: 100%;
@@ -126,8 +126,14 @@ p {
 }
 
 .contact {
-	margin: 20px 0;
-	background-color: var(--main-style-color);
+	display: flex;
+	flex-direction: column;
+	margin-bottom: 20px;
+}
+
+.contact img {
+	margin: auto;
+	height: 30px;
 }
 
 /* BEGIN CHECKBOX STYLING FOR MOBILE */
@@ -177,21 +183,20 @@ label input:checked ~ .itemArrow {
 
 @media screen and (min-width: 800px) {
 
-	h3 {
+	main h3 {
 		margin: 50px auto 0 auto;
 		padding: 20px 0;
 		color: var(--main-text-color);
 		background-color: var(--main-style-color);
 	}
 
-	h4, h5 {
+	main h4, h5 {
 		margin: 5px 0 5px 0;
 		color: var(--alt-text-color);
 	}
 
 	a {
 		color: var(--alt-text-color);
-		text-decoration: none;
 	}
 
 	header {
@@ -235,11 +240,27 @@ label input:checked ~ .itemArrow {
 	}
 
 	.contact {
-		position: absolute;
-		top: 0
-		right: 0;
-		text-align: center;
 		background-color: transparent;
+	}
+
+	.contact {
+		flex-direction: row;
+		align-items: center;
+		position: absolute;
+		margin: 0 5px;
+		top: 0;
+		right: 0;
+		height: 50px;
+	}
+
+	.contact * {
+		padding: 0 2px;
+	}
+
+	.contact h3 {
+		display: inline;
+		margin: 0;
+		font-size: 1rem;
 	}
 
 	/* BEGIN REMOVING CHECKBOX STYLING FOR DESKTOP */
