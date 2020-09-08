@@ -27,7 +27,9 @@ h1, h2, h3, h4, h5, h6 {
 	text-transform: uppercase;
 }
 
-/* SPANS TO REPLACE H4 AND H5 BECAUSE OF LABEL, UN-REPLACE AT A LATER DATE */
+/* SPANS TO REPLACE H4 AND H5 BECAUSE OF LABEL, UN-REPLACE AT A LATER DATE
+ *
+ */
 main span {
 	display: block;
 	margin: 0;
@@ -45,7 +47,9 @@ main span {
 .itemDesc {
 	padding-bottom: 15px;
 }
-/* END H4-5/SPAN REPLACMENT */
+/*
+ *
+ * END H4-5/SPAN REPLACMENT */
 
 /* === BEGIN MOBILE STYLING === */
 
@@ -247,7 +251,9 @@ input:checked ~ label .itemArrow {
 		color: #eee;
 	}
 
-	/* SPANS TO REPLACE H4 AND H5 BECAUSE OF LABEL, UN-REPLACE AT A LATER DATE */
+	/* SPANS TO REPLACE H4 AND H5 BECAUSE OF LABEL, UN-REPLACE AT A LATER DATE
+	 *
+	 */
 	main span {
 		margin: 5px 0;
 		color: #eee;
@@ -256,7 +262,9 @@ input:checked ~ label .itemArrow {
 	.itemTitle, .itemDesc {
 		padding: 0;
 	}
-	/* END H4-5/SPAN REPLACMENT */
+	/*
+	 *
+	 * END H4-5/SPAN REPLACMENT */
 
 	a {
 		color: #eee;
