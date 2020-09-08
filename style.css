@@ -25,6 +25,8 @@ h1, h2, h3, h4, h5, h6 {
 	text-transform: uppercase;
 }
 
+/* === BEGIN MOBILE STYLING === */
+
 h1, h2 {
 	font-size: 1rem;
 	line-height: 1.5rem;
@@ -50,6 +52,12 @@ h4 {
 
 h5 {
 	padding-bottom: 15px;
+}
+
+h6 {
+	font-size: 0.8rem;
+	line-height: 2rem;
+	text-align: center;
 }
 
 h4, h5 {
@@ -102,30 +110,7 @@ section {
 	transition: all 1s;
 }
 
-input[type=checkbox] {
-	display: none;
-}
-
-label input ~ div {
-	display: none;
-}
-
-label input:checked ~ div {
-	display: block;
-}
-
-label .itemArrow {
-	float: left;
-	margin: 25px 0 0 10px;
-	width: 30px;
-}
-
-label input:checked ~ .itemArrow {
-	transform: rotate(90deg);
-}
-
 .content div {
-	padding: 5px 20px;
 	background-color: var(--alt-style-color);
 }
 
@@ -140,13 +125,55 @@ p {
 	object-fit: cover;
 }
 
-footer {
-	margin: 70px auto auto auto;
-	padding: 10px;
-	text-align: center;
+.contact {
+	margin: 20px 0;
 	background-color: var(--main-style-color);
 }
 
+/* BEGIN CHECKBOX STYLING FOR MOBILE */
+
+input[type=checkbox] {
+	display: none;
+}
+
+label input ~ div {
+	height: 0;
+	transform: rotateX(90deg);
+	transform-origin: top;
+	transition: all 1s;
+}
+
+label input:checked ~ div {
+	padding: 10px 0;
+	height: auto;
+	transform: rotateX(0);
+}
+
+label input ~ div p {
+	display: none;
+	margin: 0;
+	padding: 0;
+}
+
+label input:checked ~ div p {
+	display: block;
+	padding: 10px 20px;
+}
+
+label .itemArrow {
+	float: left;
+	margin: 25px 0 0 10px;
+	width: 30px;
+	transition: all 0.5s;
+}
+
+label input:checked ~ .itemArrow {
+	transform: rotate(45deg);
+}
+
+/* END CHECKBOX STYLING FOR MOBILE */
+
+/* === END MOBILE STYLING === */
 
 @media screen and (min-width: 800px) {
 
@@ -159,7 +186,6 @@ footer {
 
 	h4, h5 {
 		margin: 5px 0 5px 0;
-		text-align: center;
 		color: var(--alt-text-color);
 	}
 
@@ -199,9 +225,6 @@ footer {
 		text-align: left;
 	}
 
-	.content {
-	}
-
 	.content div {
 		padding: 0;
 		background-color: transparent;
@@ -211,13 +234,36 @@ footer {
 		height: 250px;
 	}
 
+	.contact {
+		position: absolute;
+		top: 0
+		right: 0;
+		text-align: center;
+		background-color: transparent;
+	}
+
+	/* BEGIN REMOVING CHECKBOX STYLING FOR DESKTOP */
+
 	label input ~ div {
+		height: auto;
+		transform: rotateX(0);
+	}
+
+	label input:checked ~ div {
+		padding: 0;
+	}
+
+	label input ~ div p, label input:checked ~ div p  {
 		display: block;
+		margin: 10px 0;
+		padding: 0;
 	}
 
 	label .itemArrow {
 		display: none;
 	}
+
+	/* END REMOVING CHECKBOX STYLING FOR DESKTOP */
 
 }
 
