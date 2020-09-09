@@ -36,7 +36,6 @@ main span {
 	font-size: 1rem;
 	line-height: 1rem;
 	text-transform: uppercase;
-	color: #111;
 }
 
 .itemTitle {
@@ -87,7 +86,6 @@ h6 {
 h4, h5 {
 	margin: 5px 0 5px 50px;
 	line-height: 1rem;
-	color: #111;
 }
 
 h1, h4 {
@@ -172,6 +170,7 @@ section {
 	-webkit-box-direction: normal;
 	    -ms-flex-direction: column;
 	        flex-direction: column;
+	justify-content: center;
 	margin-bottom: 20px;
 }
 

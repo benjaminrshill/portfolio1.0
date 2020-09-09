@@ -1,0 +1,75 @@
+body {
+	color: #111;
+	background-color: #111;
+}
+
+
+h1, h2 {
+	color: #ff3541;
+}
+
+h3 {
+	color: #ff3541;
+}
+
+h4, h5 {
+	color: #111;
+}
+
+a {
+	color: #111;
+}
+
+.portfolio {
+	background-color: #ff3541;
+}
+
+.content div {
+	background-color: #ffc759;
+}
+
+@media screen and (min-width: 800px) {
+
+	main h3 {
+		color: #111;
+		background-color: #ff3541;
+	}
+
+	main h4, h5 {
+		color: #eee;
+	}
+
+	main span {
+		color: #eee;
+	}
+
+	.itemDesc {
+		color: #ff3541;
+	}
+
+	a {
+		color: #eee;
+	}
+
+	.portfolio {
+		color: #eee;
+		background-color: transparent;
+	}
+
+	.portfolio:nth-child(odd) {
+		background-color: #392e2e;
+	}
+
+	.portfolio div:nth-child(2) {
+		border-left: 1px solid #ff3541;
+	}
+
+	.content div {
+		background-color: transparent;
+	}
+
+	.contact {
+		background-color: transparent;
+	}
+
+}
