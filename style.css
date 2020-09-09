@@ -325,6 +325,7 @@ main input:checked ~ main label .itemArrow {
 	}
 
 	.contact {
+		display: none;
 		-webkit-box-orient: horizontal;
 		-webkit-box-direction: normal;
 		    -ms-flex-direction: row;
