@@ -222,10 +222,10 @@ main label .itemArrow {
 	transition: all 0.5s;
 }
 
-main input:checked ~ main label .itemArrow {
-	-webkit-transform: rotate(45deg);
-	    -ms-transform: rotate(45deg);
-	        transform: rotate(45deg);
+main input:checked ~ label .itemArrow {
+	-webkit-transform: rotate(135deg);
+	    -ms-transform: rotate(135deg);
+	        transform: rotate(135deg);
 }
 
 /* END CHECKBOX STYLING FOR MOBILE */
