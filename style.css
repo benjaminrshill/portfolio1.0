@@ -179,11 +179,11 @@ main {
 
 /* BEGIN CHECKBOX STYLING FOR MOBILE */
 
-input[type=checkbox] {
+main input[type=checkbox] {
 	display: none;
 }
 
-input ~ div {
+main input ~ div {
 	height: 0;
 	-webkit-transform: rotateX(90deg);
 	        transform: rotateX(90deg);
@@ -195,25 +195,25 @@ input ~ div {
 	transition: all 1s;
 }
 
-input:checked ~ div {
+main input:checked ~ div {
 	padding: 10px 0;
 	height: auto;
 	-webkit-transform: rotateX(0);
 	        transform: rotateX(0);
 }
 
-input ~ div p {
+main input ~ div p {
 	display: none;
 	margin: 0;
 	padding: 0;
 }
 
-input:checked ~ div p {
+main input:checked ~ div p {
 	display: block;
 	padding: 10px 20px;
 }
 
-label .itemArrow {
+main label .itemArrow {
 	float: left;
 	margin: 25px 0 0 10px;
 	width: 30px;
@@ -222,7 +222,7 @@ label .itemArrow {
 	transition: all 0.5s;
 }
 
-input:checked ~ label .itemArrow {
+main input:checked ~ main label .itemArrow {
 	-webkit-transform: rotate(45deg);
 	    -ms-transform: rotate(45deg);
 	        transform: rotate(45deg);
@@ -270,7 +270,17 @@ input:checked ~ label .itemArrow {
 	}
 
 	header {
-		width: 300px;
+		-webkit-box-orient: horizontal;
+		-webkit-box-direction: reverse;
+		    -ms-flex-direction: row-reverse;
+		        flex-direction: row-reverse;
+		-webkit-box-pack: center;
+		    -ms-flex-pack: center;
+		        justify-content: center;
+	}
+
+	.logo img {
+		margin: 0 0 0 10px;
 	}
 
 	.portfolio {
@@ -333,7 +343,7 @@ input:checked ~ label .itemArrow {
 
 	.contact h3 {
 		display: inline;
-		margin: 0;
+		margin: 0 5px 0 0;
 		font-size: 1rem;
 	}
 
@@ -343,23 +353,23 @@ input:checked ~ label .itemArrow {
 
 	/* BEGIN REMOVING CHECKBOX STYLING FOR DESKTOP */
 
-	input ~ div {
+	main input ~ div {
 		height: auto;
 		-webkit-transform: rotateX(0);
 		        transform: rotateX(0);
 	}
 
-	input:checked ~ div {
+	main input:checked ~ div {
 		padding: 0;
 	}
 
-	input ~ div p, input:checked ~ div p  {
+	main input ~ div p, main input:checked ~ div p  {
 		display: block;
 		margin: 10px 0;
 		padding: 0;
 	}
 
-	label .itemArrow {
+	main label .itemArrow {
 		display: none;
 	}
 
