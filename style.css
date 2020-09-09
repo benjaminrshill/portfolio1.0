@@ -127,10 +127,6 @@ main {
 	margin: 40px 0 0 0;
 }
 
-section {
-	margin: auto;
-}
-
 .portfolio {
 	display: -webkit-box;
 	display: -ms-flexbox;
@@ -170,7 +166,6 @@ section {
 	-webkit-box-direction: normal;
 	    -ms-flex-direction: column;
 	        flex-direction: column;
-	justify-content: center;
 	margin-bottom: 20px;
 }
 
