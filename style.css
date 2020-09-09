@@ -159,11 +159,21 @@ main {
 }
 
 .contact {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	    -ms-flex-direction: column;
+	        flex-direction: column;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
 	margin: 30px 0;
 }
 
 .contact img {
-	margin: auto;
+	margin: auto 5px;
 	height: 30px;
 }
 
@@ -309,9 +319,6 @@ input:checked ~ label .itemArrow {
 		-webkit-box-direction: normal;
 		    -ms-flex-direction: row;
 		        flex-direction: row;
-		-webkit-box-align: center;
-		    -ms-flex-align: center;
-		        align-items: center;
 		position: absolute;
 		margin: 0 5px;
 		top: 0;
@@ -328,6 +335,10 @@ input:checked ~ label .itemArrow {
 		display: inline;
 		margin: 0;
 		font-size: 1rem;
+	}
+
+	.contact img {
+		margin: auto;
 	}
 
 	/* BEGIN REMOVING CHECKBOX STYLING FOR DESKTOP */
