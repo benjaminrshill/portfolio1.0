@@ -30,7 +30,7 @@ h1, h2, h3, h4, h5, h6 {
 /* SPANS TO REPLACE H4 AND H5 BECAUSE OF LABEL, UN-REPLACE AT A LATER DATE
  *
  */
-main span {
+.itemTitle, .itemDesc {
 	display: block;
 	margin: 5px 0 5px 50px;
 	font-size: 1rem;
@@ -249,13 +249,10 @@ main input:checked ~ label .itemArrow {
 	/* SPANS TO REPLACE H4 AND H5 BECAUSE OF LABEL, UN-REPLACE AT A LATER DATE
 	 *
 	 */
-	main span {
-		margin: 10px 0;
-		color: #eee;
-	}
-
 	.itemTitle, .itemDesc {
+		margin: 10px 0;
 		padding: 0;
+		color: #eee;
 	}
 
 	.itemDesc {
