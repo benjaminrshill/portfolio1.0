@@ -5,7 +5,7 @@
 * Browsers: last 4 version
 */
 
-@import url('https://fonts.googleapis.com/css2?family=Josefin+Slab&family=Raleway:wght@200;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Slab:wght@400;600&family=Raleway:wght@200;400;700&display=swap');
 
 body {
 	-webkit-box-sizing: border-box;
@@ -21,6 +21,7 @@ body {
 
 p {
 	font-family: 'Josefin Slab', Georgia, Times, serif;
+	font-weight: 600;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -222,6 +223,10 @@ main input:checked ~ label .itemArrow {
 /* === END MOBILE STYLING === */
 
 @media screen and (min-width: 800px) {
+
+	p {
+		font-weight: 400;
+	}
 
 	h1, h2 {
 		font-size: 1.5rem;
