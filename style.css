@@ -130,7 +130,7 @@ header {
 }
 
 main {
-	margin: 40px 0 0 0;
+	margin: 40px auto;
 }
 
 .portfolio {
@@ -222,15 +222,42 @@ main input:checked ~ label .itemArrow {
 
 /* === END MOBILE STYLING === */
 
+@media screen and (min-width: 600px) {
+
+	h1, h2 {
+		font-size: 1.5rem;
+		line-height: 1.2rem;
+	}
+
+	main {
+		width: 80%;
+	}
+
+	header {
+		-webkit-box-orient: horizontal;
+		-webkit-box-direction: reverse;
+		-ms-flex-direction: row-reverse;
+		flex-direction: row-reverse;
+		-webkit-box-pack: center;
+		-ms-flex-pack: center;
+		justify-content: center;
+	}
+
+	.logo img {
+		margin: 0 0 0 10px;
+	}
+
+}
+
 @media screen and (min-width: 800px) {
 
 	p {
 		font-weight: 400;
 	}
 
-	h1, h2 {
-		font-size: 1.5rem;
-		line-height: 1.2rem;
+
+	main {
+		width: 100%;
 	}
 
 	main h3 {
@@ -266,20 +293,6 @@ main input:checked ~ label .itemArrow {
 
 	a {
 		color: #eee;
-	}
-
-	header {
-		-webkit-box-orient: horizontal;
-		-webkit-box-direction: reverse;
-		    -ms-flex-direction: row-reverse;
-		        flex-direction: row-reverse;
-		-webkit-box-pack: center;
-		    -ms-flex-pack: center;
-		        justify-content: center;
-	}
-
-	.logo img {
-		margin: 0 0 0 10px;
 	}
 
 	.portfolio {
