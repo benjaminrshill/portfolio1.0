@@ -16,7 +16,6 @@
 	<link type='text/css' rel='stylesheet' href='normalize.css' />
 	<link type='text/css' rel='stylesheet' href='style.css' />
 	<link type='text/css' rel='stylesheet' href='contact.css' />
-	<!-- <link type='text/css' rel='stylesheet' href='lightswitch.css' /> -->
 
 	<meta property="og:title" content="Benjamin RS Hill | Developer Portfolio" />
 	<meta property="og:type" content="profile" />
@@ -28,12 +27,6 @@
 </head>
 
 <body>
-
-	<!-- <label id="switch">
-	  <input type="checkbox" checked>
-	  <span></span>
-	  <div></div>
-	</label> -->
 
 	<header>
 
@@ -176,42 +169,27 @@
 
 	</main>
 
-	<section class="contact">
+    <section class="contact">
 
 		<h3>Contact</h3>
-		<div>
-			<a href="mailto:benjaminrshill@hotmail.com">
-				<img alt="email" src="images/email.png" />
+
+		<label for="contactCheck" class="contactLabel">
+            <span class="contactButton">
+                <img src="images/heart.png" alt="Contact" />
+			</span>
+		</label>
+		<input id="contactCheck" type="checkbox" />
+        <div class="contactIcons">
+			<a href="mailto:benjaminrshill@hotmail.com" target="_blank" rel="noopener noreferrer">
+				<img class="iconOne" alt="email" src="images/email.png" />
 			</a>
-			<a href="https://github.com/brownspunbear">
-				<img alt="GitHub" src="images/github.png" />
+			<a href="https://github.com/brownspunbear" target="_blank" rel="noopener noreferrer">
+				<img class="iconTwo" alt="GitHub" src="images/github.png" />
 			</a>
-			<a href="https://codepen.io/brownspunbear/">
-				<img alt="CodePen" src="images/codepen.png" />
+			<a href="https://codepen.io/brownspunbear/" target="_blank" rel="noopener noreferrer">
+				<img class="iconThree" alt="CodePen" src="images/codepen.png" />
 			</a>
 		</div>
-
-	</section>
-
-    <section id="social">
-
-		<label for="socialCheck">
-			<input id="socialCheck" type="checkbox" />
-            <div id="socialButton">
-                <img src="images/heart.png" alt='Contact' />
-            </div>
-            <menu id="socialIcons">
-				<a href="mailto:benjaminrshill@hotmail.com" target="_blank" rel="noopener noreferrer">
-					<img class="iconOne" alt="email" src="images/email.png" />
-				</a>
-				<a href="https://github.com/brownspunbear" target="_blank" rel="noopener noreferrer">
-					<img class="iconTwo" alt="GitHub" src="images/github.png" />
-				</a>
-				<a href="https://codepen.io/brownspunbear/" target="_blank" rel="noopener noreferrer">
-					<img class="iconThree" alt="CodePen" src="images/codepen.png" />
-				</a>
-            </menu>
-		</label>
 
     </section>
 

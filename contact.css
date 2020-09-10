@@ -1,24 +1,52 @@
-#social {
+.contact {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	    -ms-flex-direction: column;
+	        flex-direction: column;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+	margin: 30px 0;
+}
+
+.contact img {
+	margin: auto 5px;
+	height: 30px;
+}
+
+#contactCheck, .contactLabel {
 	display: none;
 }
 
 @media (min-width:800px) {
 
-	#social {
+	.contact h3 {
+		display: none;
+	}
+
+	.contact {
 		display: block;
 		position: absolute;
+		margin: auto;
 		width: 200px;
 		height: 200px;
 		top: -65px;
 		right: -65px;
 	}
 
-	#social * {
+	.contact * {
 		padding: 0;
 		margin: 0;
 	}
 
-	#socialButton {
+	.contactLabel {
+		display: block;
+	}
+
+	.contactButton {
 		cursor: pointer;
 		z-index: 2;
 		margin: auto;
@@ -32,11 +60,11 @@
 		border-radius: 50%;
 		color: #111;
 		background-color: #ff3541;
-		box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.1);
+		box-shadow: 0 2px 10px 3px rgba(0, 0, 0, 0.2);
 		transition: transform .3s ease;
 	}
 
-	#socialIcons {
+	.contactIcons {
 		z-index: 1;
 		margin: auto;
 		position: absolute;
@@ -52,54 +80,55 @@
 		transition: all .3s ease;
 	}
 
-	#socialButton:hover {
+	.contactButton:hover {
 		transform: scale(1.1);
 	}
 
-	#socialButton:active {
+	.contactButton:active {
 		transform: scale(0.9);
 	}
 
-	#socialCheck:checked ~ #socialButton {
+	#contactCheck:checked ~ .contactButton {
 		transform: rotateY(180deg);
 		box-shadow: 0 8px 20px -8px rgba(0, 0, 0, 0.8);
 	}
 
-	#socialCheck:checked ~ #socialIcons {
+	#contactCheck:checked ~ .contactIcons {
 		width: 200px;
 		height: 200px;
 	}
 
-	#social img {
+	.contact img {
 		position: absolute;
 		top: 0;
 		bottom: 0;
 		left: 0;
 		right: 0;
 		margin: auto;
+		height: auto;
 		transition: transform .3s ease;
 	}
 
-	#socialButton img {
+	.contactButton img {
 		width: 60%;
 	}
 
-	#socialIcons img {
+	.contactIcons img {
 		width: 30px;
 		border-radius: 50%;
 		box-shadow: 0 8px 20px -8px rgba(0, 0, 0, 0.8);
 		transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
 	}
 
-	#socialCheck:checked ~ #socialIcons .iconOne {
+	#contactCheck:checked ~ .contactIcons .iconOne {
 		transform: translate(0, 70px);
 	}
 
-	#socialCheck:checked ~ #socialIcons .iconTwo {
+	#contactCheck:checked ~ .contactIcons .iconTwo {
 		transform: translate(-50px, 50px);
 	}
 
-	#socialCheck:checked ~ #socialIcons .iconThree {
+	#contactCheck:checked ~ .contactIcons .iconThree {
 		transform: translate(-70px, 0);
 	}
 
