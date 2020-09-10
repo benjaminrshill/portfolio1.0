@@ -97,7 +97,7 @@
 		left: 0;
 		right: 0;
 		border-radius: 100%;
-		background-color: #ff3541;
+		background-color: rgba(255, 53, 65, 0.9);
 		-webkit-box-shadow: 0 8px 20px -8px rgba(0, 0, 0, 0.5);
 		box-shadow: 0 8px 20px -8px rgba(0, 0, 0, 0.5);
 		-webkit-transition: all .3s ease;
