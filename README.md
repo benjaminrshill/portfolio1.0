@@ -1,3 +1,3 @@
 # portfolio
 
-First portfolio design at @Mayden-Academy, using `HTML` and `CSS`
+First portfolio design, using `HTML` and `CSS`.
