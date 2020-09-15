@@ -50,7 +50,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 /*
  *
- * END H4-5/SPAN REPLACMENT */
+ * END H4-5/SPAN REPLACEMENT */
 
 /* === BEGIN MOBILE STYLING === */
 
@@ -150,10 +150,6 @@ main {
 	transition: all 1s;
 }
 
-.content div {
-	background-color: #ffc759;
-}
-
 .contentImg {
 	display: block;
 	width: 100%;
@@ -183,6 +179,7 @@ main input ~ div {
 	-webkit-transition: all 1s;
 	-o-transition: all 1s;
 	transition: all 1s;
+	background-color: #ffc759;
 }
 
 main input:checked ~ div {
@@ -289,7 +286,7 @@ main input:checked ~ label .itemArrow {
 	}
 	/*
 	 *
-	 * END H4-5/SPAN REPLACMENT */
+	 * END H4-5/SPAN REPLACEMENT */
 
 	a {
 		color: #eee;
