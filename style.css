@@ -283,7 +283,6 @@ main input:checked ~ label .compass {
 		-webkit-box-pack: center;
 		    -ms-flex-pack: center;
 		        justify-content: center;
-		margin: auto;
 		color: #eee;
 		background-color: transparent;
 		box-shadow: none;
