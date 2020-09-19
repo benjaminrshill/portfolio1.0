@@ -5,52 +5,34 @@
 * Browsers: last 4 version
 */
 
-@import url('https://fonts.googleapis.com/css2?family=Josefin+Slab:wght@400;600&family=Raleway:wght@200;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sanchez&family=Raleway:wght@200;400;700&display=swap');
 
 body {
 	-webkit-box-sizing: border-box;
 	        box-sizing: border-box;
 	margin: auto;
 	font-family: 'Raleway', Helvetica, Arial, sans-serif;
-	font-size: 19px;
+	font-size: 16px;
 	line-height: 22px;
 	color: #111;
 	background-color: #111;
 	overflow-x: hidden;
 }
 
+a {
+	color: #ff3541;
+	text-decoration: none;
+}
+
 p {
-	font-family: 'Josefin Slab', Georgia, Times, serif;
-	font-weight: 600;
+	font-family: 'Sanchez', Georgia, Times, serif;
+	color: #ddd;
 }
 
 h1, h2, h3, h4, h5, h6 {
 	margin: 0;
 	text-transform: uppercase;
 }
-
-/* SPANS TO REPLACE H4 AND H5 BECAUSE OF LABEL, UN-REPLACE AT A LATER DATE
- *
- */
-.itemTitle, .itemDesc {
-	display: block;
-	margin: 5px 0 5px 50px;
-	font-size: 1rem;
-	line-height: 1rem;
-	text-transform: uppercase;
-}
-
-.itemTitle {
-	padding-top: 15px;
-	font-weight: 700;
-}
-
-.itemDesc {
-	padding-bottom: 15px;
-}
-/*
- *
- * END H4-5/SPAN REPLACEMENT */
 
 /* === BEGIN MOBILE STYLING === */
 
@@ -80,7 +62,8 @@ h4 {
 }
 
 h4, h5 {
-	margin: 5px 0 5px 50px;
+	margin: 5px 0 5px 65px;
+	font-size: 1rem;
 	line-height: 1rem;
 }
 
@@ -100,11 +83,6 @@ h1, h4 {
 
 h2, h5 {
 	font-weight: 400;
-}
-
-a {
-	color: #111;
-	text-decoration: none;
 }
 
 header {
@@ -179,7 +157,7 @@ main input ~ div {
 	-webkit-transition: all 1s;
 	-o-transition: all 1s;
 	transition: all 1s;
-	background-color: #ffc759;
+	background-color: #000;
 }
 
 main input:checked ~ div {
@@ -200,16 +178,22 @@ main input:checked ~ div p {
 	padding: 10px 20px;
 }
 
-main label .itemArrow {
+main input:checked ~ label > div {
+	-webkit-transform: rotateY(180deg) rotateX(150deg);
+	    -ms-transform: rotateY(180deg) rotateX(150deg);
+			transform: rotateY(180deg) rotateX(150deg);
+}
+
+main label .compass {
 	float: left;
-	margin: 25px 0 0 10px;
+	margin: 25px 0 0 16px;
 	width: 30px;
 	-webkit-transition: all 0.5s;
 	-o-transition: all 0.5s;
 	transition: all 0.5s;
 }
 
-main input:checked ~ label .itemArrow {
+main input:checked ~ label .compass {
 	-webkit-transform: rotate(135deg);
 	    -ms-transform: rotate(135deg);
 	        transform: rotate(135deg);
@@ -248,8 +232,13 @@ main input:checked ~ label .itemArrow {
 
 @media screen and (min-width: 800px) {
 
+	a {
+		color: #fff;
+	}
+
 	p {
 		font-weight: 400;
+		color: #fff;
 	}
 
 
@@ -268,25 +257,14 @@ main input:checked ~ label .itemArrow {
 	}
 
 	main h4, h5 {
-		margin: 5px 0;
-		color: #eee;
-	}
-
-	/* SPANS TO REPLACE H4 AND H5 BECAUSE OF LABEL, UN-REPLACE AT A LATER DATE
-	 *
-	 */
-	.itemTitle, .itemDesc {
 		margin: 10px 0;
 		padding: 0;
 		color: #eee;
 	}
 
-	.itemDesc {
+	main h5 {
 		color: #ff3541;
 	}
-	/*
-	 *
-	 * END H4-5/SPAN REPLACEMENT */
 
 	a {
 		color: #eee;
@@ -306,7 +284,7 @@ main input:checked ~ label .itemArrow {
 	}
 
 	.portfolio:nth-child(odd) {
-		background-color: #392e2e;
+		background-color: #251a1a;
 	}
 
 	.portfolio > div {
@@ -353,7 +331,7 @@ main input:checked ~ label .itemArrow {
 		padding: 0;
 	}
 
-	main label .itemArrow {
+	main input ~ label > div, main label .compass {
 		display: none;
 	}
 
