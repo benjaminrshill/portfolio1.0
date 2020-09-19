@@ -134,7 +134,12 @@ main {
 	height: 120px;
 	-o-object-fit: cover;
 	   object-fit: cover;
+	object-position: 0 0;
 	border-bottom-left-radius: 50px;
+}
+
+.wallpaper {
+	object-position: 0 50%;
 }
 
 .about {
