@@ -10,11 +10,27 @@
 	transition: all 1s;
 }
 
+.box * {
+	margin: auto;
+}
+
 .cube {
 	width: 100%;
 	height: 100%;
 	transform-style: preserve-3d;
-	transform: rotateY(45deg) rotateX(0deg);
+	transform: rotateY(45deg);
+}
+
+.cubeTwo {
+	transform: rotateY(-45deg) rotateZ(90deg);
+}
+
+.cubeThr {
+	transform: rotateY(45deg) rotateX(90deg) rotateZ(-90deg);
+}
+
+.cubeFou {
+	transform: rotateY(45deg) rotateX(-90deg) rotateZ(180deg);
 }
 
 .cube > div {
@@ -24,7 +40,6 @@
 	height: 100%;
 	background: rgba(17, 17, 17, 0.8);
 	border: 1px solid #ff3541;
-	transition: all 1s ease-in-out;
 }
 
 .cube > div > div {
@@ -63,7 +78,7 @@
 	transform-origin: center left;
 }
 .two div {
-  transform: rotate(-45deg);  
+  transform: rotate(-45deg);
 }
 .fiv {
 	transform: rotateY(90deg) translateX(11px);
