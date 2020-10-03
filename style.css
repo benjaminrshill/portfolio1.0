@@ -252,13 +252,13 @@ main input:checked ~ label .compass {
 	}
 
 	main h3 {
-		margin: 50px auto 0 auto;
+		margin: 50px auto 20px auto;
 		padding: 20px 0;
-		width: 60%;
 		color: #111;
+		width: 300px;
 		background-color: #ff3541;
 		border-top-left-radius: 100px;
-		border-bottom-right-radius: 100px;
+		border-top-right-radius: 100px;
 	}
 
 	main h4, h5 {
@@ -289,8 +289,8 @@ main input:checked ~ label .compass {
 	}
 
 	.portfolio:nth-child(odd) {
-		background-color: #251a1a;
-		border-bottom-left-radius: 200px;
+		background: linear-gradient(to right, rgba(37, 26, 26, 0), rgba(37, 26, 26, 1));
+		border-bottom-left-radius: 0;
 	}
 
 	.portfolio > div {
@@ -315,7 +315,6 @@ main input:checked ~ label .compass {
 
 	.contentImg {
 		height: 250px;
-		border-top-right-radius: 100px;
 		border-bottom-left-radius: 200px;
 	}
 
@@ -349,10 +348,6 @@ main input:checked ~ label .compass {
 
 	main {
 		width: 63vw;
-	}
-
-	main h3 {
-		width: 60%;
 	}
 
 	.portfolio > div {
