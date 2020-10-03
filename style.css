@@ -258,7 +258,7 @@ main input:checked ~ label .compass {
 		width: 300px;
 		background-color: #ff3541;
 		border-top-left-radius: 100px;
-		border-top-right-radius: 100px;
+		border-bottom-right-radius: 100px;
 	}
 
 	main h4, h5 {
@@ -285,6 +285,7 @@ main input:checked ~ label .compass {
 		        justify-content: center;
 		color: #eee;
 		background-color: transparent;
+		border-top-right-radius: 100px;
 		box-shadow: none;
 	}
 
@@ -316,6 +317,7 @@ main input:checked ~ label .compass {
 	.contentImg {
 		height: 250px;
 		border-bottom-left-radius: 200px;
+		border-top-right-radius: 150px;
 	}
 
 	/* BEGIN REMOVING CHECKBOX STYLING FOR DESKTOP */
