@@ -12,7 +12,8 @@ let compare = (arr1, arr2) => {
 }
 
 let hit = () => {
-    document.body.style.background = 'linear-gradient(to right, #3a0d3e, #3e0d28)';
+    document.body.classList.add('kCode');
+    console.log('hit');
 }
 
 document.addEventListener('keydown', (event) => {

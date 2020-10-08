@@ -17,6 +17,7 @@ body {
 	color: #111;
 	background: #181818;
 	overflow-x: hidden;
+	animation-direction: alternate;
 }
 
 a {
@@ -356,4 +357,13 @@ main input:checked ~ label .compass {
 		width: 30vw;
 	}
 
+}
+
+.kCode {
+	animation: spectrum 5s infinite;
+}
+
+@keyframes spectrum {
+	from	{background: linear-gradient(to right, #3e0d15, #3e0d28);}
+	to		{background: linear-gradient(to right, #3a0d3e, #3e0d28);}
 }
