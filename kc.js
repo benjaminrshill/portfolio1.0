@@ -11,13 +11,19 @@ let compare = (arr1, arr2) => {
     } return true;
 }
 
+let hit = () => {
+    document.body.style.background = 'linear-gradient(to right, #3a0d3e, #3e0d28)';
+}
+
 document.addEventListener('keydown', (event) => {
-    keys.includes(event.code) && compare(sequence, kCode) ? sequence.push(event.code) : sequence = [event.code];
+    keys.includes(event.code) && compare(sequence, kCode)
+        ? sequence.push(event.code)
+        : sequence = [event.code];
     console.log(sequence);
 });
 
 document.addEventListener('keyup', (event) => {
     sequence.length === kCode.length
-        ? (compare(sequence, kCode) ? console.log('HIT!') : null)
+        ? (compare(sequence, kCode) ? hit() : null)
         : null;
 });
