@@ -12,7 +12,7 @@ let compare = (arr1, arr2) => {
 }
 
 document.addEventListener('keydown', (event) => {
-    keys.includes(event.code) && compare(sequence, kCode) ? sequence.push(event.code) : sequence = [];
+    keys.includes(event.code) && compare(sequence, kCode) ? sequence.push(event.code) : sequence = [event.code];
     console.log(sequence);
 });
 
