@@ -4,22 +4,20 @@ const   keys = ['ArrowUp', 'ArrowDown', 'ArrowLeft', 'ArrowRight', 'KeyA', 'KeyB
 let sequence = [];
 
 let compare = (arr1, arr2) => {
-    if (arr1.length === arr2.length) {
-        for (let i = 0; i < arr1.length; i++) {
-            if (arr1[i] !== arr2[i]) {
-                return false;
-            }
-        } return true;
-    } else {
-        return false
-    }
+    for (let i = 0; i < arr1.length; i++) {
+        if (arr1[i] !== arr2[i]) {
+            return false;
+        }
+    } return true;
 }
 
 document.addEventListener('keydown', (event) => {
-    (keys.includes(event.code)) ? sequence.push(event.code) : sequence = [];
+    keys.includes(event.code) && compare(sequence, kCode) ? sequence.push(event.code) : sequence = [];
     console.log(sequence);
 });
 
 document.addEventListener('keyup', (event) => {
-    compare(sequence, kCode) ? console.log('HIT!') : null;
+    sequence.length === kCode.length
+        ? (compare(sequence, kCode) ? console.log('HIT!') : null)
+        : null;
 });
