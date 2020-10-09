@@ -17,7 +17,7 @@ body {
 	color: #111;
 	background: #181818;
 	overflow-x: hidden;
-	animation-direction: alternate;
+	transition: all 3s ease;
 }
 
 a {
@@ -252,14 +252,21 @@ main input:checked ~ label .compass {
 		width: 85vw;
 	}
 
+	section {
+		display: flex;
+		flex-direction: column;
+	}
+
 	main h3 {
 		margin: 50px auto 20px auto;
-		padding: 20px 0;
+		padding: 5px;
 		color: #111;
-		width: 300px;
+		width: auto;
+		height: auto;
 		background-color: #ff3541;
-		border-top-left-radius: 100px;
-		border-bottom-right-radius: 100px;
+		border: 3px solid #111;
+		border-radius: 20px;
+		box-shadow: 0 0 0 2px #ff3541;
 	}
 
 	main h4, h5 {
@@ -359,11 +366,15 @@ main input:checked ~ label .compass {
 
 }
 
-.kCode {
-	animation: spectrum 5s infinite;
+.fade {
+	animation: fade 3s ease;
 }
 
-@keyframes spectrum {
-	from	{background: linear-gradient(to right, #3e0d15, #3e0d28);}
-	to		{background: linear-gradient(to right, #3a0d3e, #3e0d28);}
+.bigFade {
+	opacity: 0;
+}
+
+@keyframes fade {
+	0%, 70% {opacity: 1;}
+	40%, 100% {opacity: 0;}
 }
