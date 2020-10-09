@@ -395,7 +395,7 @@ main input:checked ~ label .compass {
 }
 
 .fade {
-	animation: fade 2s forwards;
+	animation: fade 4s forwards;
 }
 
 @keyframes fade {

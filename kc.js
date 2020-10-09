@@ -28,18 +28,18 @@ let hit = (allEls) => {
         setTimeout(() => {
             el.classList.add('fade');
             el.textContent += neo();
-        }, Math.floor(Math.random() * 4000));
+        }, Math.floor(Math.random() * 6000));
         setTimeout(() => {
             el.classList.add('jump');
-        }, Math.floor(Math.random() * 4000));
+        }, Math.floor(Math.random() * 6000));
     });
     setTimeout(() => {
         boss.classList.remove('crouch');
-    }, 4000);
+    }, 6500);
     setTimeout(() => {
         document.querySelector('.boss p').innerHTML = 'G A M E &nbsp; O V E R .';
         document.querySelector('.boss p').classList.add('type');
-    }, 5500);
+    }, 8500);
 }
 
 // document.addEventListener('keyup', (event) => {
