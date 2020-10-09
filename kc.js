@@ -1,6 +1,9 @@
 const   kCode = ['ArrowUp', 'ArrowUp', 'ArrowDown', 'ArrowDown', 'ArrowLeft', 'ArrowRight', 'ArrowLeft', 'ArrowRight', 'KeyB', 'KeyA'],
         allEls = Array.from(document.querySelectorAll('h1, h2, h3, h4, h5, p, img, .portfolio, .contact')),
-        matrix = 'abcdefghjiklmnopqrstuvwxyz1234567890!@£$%&*+-?';
+        matrix = ['@-!', 'ERROR', '$_BUMP', 'pango--', 'HELP ME', 'what did you say what did you say what',
+                    'request THIS, b-', 'no no no no no no no no no no', '666', 'merry_go_round',
+                    'a', 'b', 'z', 'u', 'jk', 'fr@k', 'Q', 'ooo', '! ! ! !', 'come out and play',
+                    'Reference Error', 'What have you DONE?!'];
 
 let sequence = [];
 
@@ -13,7 +16,7 @@ let compare = (arr1, arr2) => {
 }
 
 let neo = () => {
-    let rand = (Math.floor(Math.random() * 40));
+    let rand = (Math.floor(Math.random() * 30));
     return matrix[rand];
 }
 
@@ -27,29 +30,20 @@ let hit = (allEls) => {
     allEls.forEach(el => {
         setTimeout(() => {
             el.classList.add('fade');
-            el.textContent += neo();
-        }, Math.floor(Math.random() * 6000));
+            el.textContent = neo();
+        }, Math.floor(Math.random() * 10000));
         setTimeout(() => {
             el.classList.add('jump');
-        }, Math.floor(Math.random() * 6000));
+        }, Math.floor(Math.random() * 10000));
     });
     setTimeout(() => {
         boss.classList.remove('crouch');
-    }, 6500);
+    }, 8000);
     setTimeout(() => {
         document.querySelector('.boss p').innerHTML = 'G A M E &nbsp; O V E R .';
         document.querySelector('.boss p').classList.add('type');
-    }, 8500);
+    }, 10000);
 }
-
-// document.addEventListener('keyup', (event) => {
-//     kCode.includes(event.code) && compare(sequence, kCode)
-//         ? (sequence.length === kCode.length
-//                 ? hit(allEls)
-//                 : sequence.push(event.code))
-//         : sequence = [event.code];
-//     console.log(sequence);
-// });
 
 document.addEventListener('keydown', (event) => {
     kCode.includes(event.code) && compare(sequence, kCode)
