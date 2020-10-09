@@ -13,11 +13,9 @@ let compare = (arr1, arr2) => {
 }
 
 let neo = () => {
-    let rand = (Math.floor(Math.random() * 66));
+    let rand = (Math.floor(Math.random() * 40));
     return matrix[rand];
 }
-
-console.log(neo());
 
 let hit = (allEls) => {
     let boss = document.getElementById('ccm');
