@@ -32,7 +32,7 @@ let hit = (allEls) => {
     setTimeout(() => {
         document.querySelector('.boss p').innerHTML = 'G A M E &nbsp; O V E R .';
         document.querySelector('.boss p').classList.add('type');
-    }, 7000);
+    }, 5500);
 }
 
 document.addEventListener('keydown', (event) => {

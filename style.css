@@ -17,7 +17,6 @@ body {
 	color: #111;
 	background: #181818;
 	overflow-x: hidden;
-	transition: all 2s ease;
 }
 
 a {
@@ -396,7 +395,7 @@ main input:checked ~ label .compass {
 }
 
 .fade {
-	animation: fade 3s ease;
+	animation: fade 2s forwards;
 }
 
 .bigFade {
