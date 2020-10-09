@@ -21,18 +21,18 @@ let hit = (allEls) => {
     allEls.forEach(el => {
         setTimeout(() => {
             el.classList.add('fade');
-        }, Math.floor(Math.random() * 3000));
+        }, Math.floor(Math.random() * 4000));
         setTimeout(() => {
             el.classList.add('jump');
-        }, Math.floor(Math.random() * 3000));
+        }, Math.floor(Math.random() * 4000));
     });
     setTimeout(() => {
         boss.classList.remove('crouch');
-    }, 1000);
+    }, 4000);
     setTimeout(() => {
         document.querySelector('.boss p').innerHTML = 'G A M E &nbsp; O V E R .';
         document.querySelector('.boss p').classList.add('type');
-    }, 3500);
+    }, 7000);
 }
 
 document.addEventListener('keydown', (event) => {
