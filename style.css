@@ -398,10 +398,6 @@ main input:checked ~ label .compass {
 	animation: fade 2s forwards;
 }
 
-.bigFade {
-	opacity: 0;
-}
-
 @keyframes fade {
 	0%, 15%, 70% {opacity: 1;}
 	10%, 100% {opacity: 0;}

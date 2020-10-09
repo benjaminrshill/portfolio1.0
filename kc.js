@@ -1,5 +1,6 @@
 const   kCode = ['ArrowUp', 'ArrowUp', 'ArrowDown', 'ArrowDown', 'ArrowLeft', 'ArrowRight', 'ArrowLeft', 'ArrowRight', 'KeyB', 'KeyA'],
-        allEls = Array.from(document.querySelectorAll('h1, h2, h3, h4, h5, p, img, .portfolio, .contact'));
+        allEls = Array.from(document.querySelectorAll('h1, h2, h3, h4, h5, p, img, .portfolio, .contact')),
+        matrix = 'abcdefghjiklmnopqrstuvwxyz1234567890!@£$%&*+-?';
 
 let sequence = [];
 
@@ -11,6 +12,13 @@ let compare = (arr1, arr2) => {
     } return true;
 }
 
+let neo = () => {
+    let rand = (Math.floor(Math.random() * 66));
+    return matrix[rand];
+}
+
+console.log(neo());
+
 let hit = (allEls) => {
     let boss = document.getElementById('ccm');
     boss.classList.remove('hide');
@@ -21,6 +29,7 @@ let hit = (allEls) => {
     allEls.forEach(el => {
         setTimeout(() => {
             el.classList.add('fade');
+            el.textContent += neo();
         }, Math.floor(Math.random() * 4000));
         setTimeout(() => {
             el.classList.add('jump');
@@ -35,11 +44,19 @@ let hit = (allEls) => {
     }, 5500);
 }
 
+// document.addEventListener('keyup', (event) => {
+//     kCode.includes(event.code) && compare(sequence, kCode)
+//         ? (sequence.length === kCode.length
+//                 ? hit(allEls)
+//                 : sequence.push(event.code))
+//         : sequence = [event.code];
+//     console.log(sequence);
+// });
+
 document.addEventListener('keydown', (event) => {
     kCode.includes(event.code) && compare(sequence, kCode)
         ? sequence.push(event.code)
         : sequence = [event.code];
-    console.log(sequence);
 });
 
 document.addEventListener('keyup', (event) => {
