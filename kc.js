@@ -1,4 +1,5 @@
-const kCode = ['ArrowUp', 'ArrowUp', 'ArrowDown', 'ArrowDown', 'ArrowLeft', 'ArrowRight', 'ArrowLeft', 'ArrowRight', 'KeyB', 'KeyA'];
+const   kCode = ['ArrowUp', 'ArrowUp', 'ArrowDown', 'ArrowDown', 'ArrowLeft', 'ArrowRight', 'ArrowLeft', 'ArrowRight', 'KeyB', 'KeyA'],
+        allEls = Array.from(document.querySelectorAll('h1, h2, h3, h4, h5, p, img, .portfolio, .contact'));
 
 let sequence = [];
 
@@ -10,16 +11,28 @@ let compare = (arr1, arr2) => {
     } return true;
 }
 
-let hit = () => {
-    let allEls = Array.from(document.querySelectorAll('h1, h2, h3, h4, h5, p, img, .portfolio, .contact'));
+let hit = (allEls) => {
+    let boss = document.getElementById('ccm');
+    boss.classList.remove('hide');
+    boss.classList.add('boss');
+    document.querySelectorAll('h3').forEach((el) => {
+        el.classList.add('glitch');
+    });
     allEls.forEach(el => {
         setTimeout(() => {
             el.classList.add('fade');
-        }, Math.floor(Math.random() * 5000));
+        }, Math.floor(Math.random() * 3000));
+        setTimeout(() => {
+            el.classList.add('jump');
+        }, Math.floor(Math.random() * 3000));
     });
     setTimeout(() => {
-        document.body.classList.add('bigFade');
-    }, 5100);
+        boss.classList.remove('crouch');
+    }, 1000);
+    setTimeout(() => {
+        document.querySelector('.boss p').innerHTML = 'G A M E &nbsp; O V E R .';
+        document.querySelector('.boss p').classList.add('type');
+    }, 3500);
 }
 
 document.addEventListener('keydown', (event) => {
@@ -31,6 +44,7 @@ document.addEventListener('keydown', (event) => {
 
 document.addEventListener('keyup', (event) => {
     sequence.length === kCode.length
-        ? (compare(sequence, kCode) ? hit() : null)
+        ? (compare(sequence, kCode) ? hit(allEls) : null)
         : null;
 });
+
