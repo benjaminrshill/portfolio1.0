@@ -1,9 +1,12 @@
-const   kCode = ['ArrowUp', 'ArrowUp', 'ArrowDown', 'ArrowDown', 'ArrowLeft', 'ArrowRight', 'ArrowLeft', 'ArrowRight', 'KeyB', 'KeyA'],
-        allEls = Array.from(document.querySelectorAll('h1, h2, h3, h4, h5, p, img, .portfolio, .contact')),
-        matrix = ['@-!', 'ERROR', '$_BUMP', 'pango--', 'HELP ME', 'what did you say what did you say what',
-                    'request THIS, b-', 'no no no no no no no no no no', '666', 'merry_go_round',
-                    'a', 'b', 'z', 'u', 'jk', 'fr@k', 'Q', 'ooo', '! ! ! !', 'come out and play',
-                    'Reference Error', 'What have you DONE?!'];
+const kCode = ['ArrowUp', 'ArrowUp', 'ArrowDown', 'ArrowDown', 'ArrowLeft', 'ArrowRight', 'ArrowLeft', 'ArrowRight', 'KeyB', 'KeyA'],
+    allEls = Array.from(document.querySelectorAll('h1, h2, h3, h4, h5, p, img, .portfolio, .contact')),
+    matrix = [
+        '@-!', 'ERROR', '$_BUMP', 'pango--', 'HELP ME', 'what did you say what did you say what',
+        'ring-a-ring o---! ro$es, a pocket fu1l of posies', 'a-tishoo, a-tishoo, we all f@ll d0wn',
+        'no no no no no no no no no no', '6 6 6', 'merry_go_round', 'cataclysm.join();',
+        'a', 'b', 'z', 'u', 'jk', 'fr@k', 'Q', 'ooo', '! ! ! !', 'come out and play',
+        'Reference Error', 'What have you DONE?!'
+    ];
 
 let sequence = [];
 
@@ -15,13 +18,14 @@ let compare = (arr1, arr2) => {
     } return true;
 }
 
-let neo = () => {
+let neo = (matrix) => {
     let rand = (Math.floor(Math.random() * 30));
     return matrix[rand];
 }
 
 let hit = (allEls) => {
     let boss = document.getElementById('ccm');
+    document.body.classList.add('twitch');
     boss.classList.remove('hide');
     boss.classList.add('boss');
     document.querySelectorAll('h3').forEach((el) => {
@@ -30,11 +34,11 @@ let hit = (allEls) => {
     allEls.forEach(el => {
         setTimeout(() => {
             el.classList.add('fade');
-            el.textContent = neo();
-        }, Math.floor(Math.random() * 10000));
+            el.textContent = neo(matrix);
+        }, Math.floor(Math.random() * 10000) + 1000);
         setTimeout(() => {
             el.classList.add('jump');
-        }, Math.floor(Math.random() * 10000));
+        }, Math.floor(Math.random() * 10000) + 500);
     });
     setTimeout(() => {
         boss.classList.remove('crouch');
