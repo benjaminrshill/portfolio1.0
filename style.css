@@ -12,6 +12,10 @@ body {
 	overflow-x: hidden;
 }
 
+a:focus {
+	outline: 2px solid #3456ff;
+}
+
 a {
 	color: #000;
 	text-decoration: none;
